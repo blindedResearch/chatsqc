@@ -8,7 +8,7 @@ Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatS
 
  ## Introduction
 
- This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts, see [Megahed et al. 2023](https://www.tandfonline.com/doi/full/10.1080/08982112.2023.2206479) for a detailed discussion. Our work attempts to address this issue and reduce hallucinations by grounding the answers to vetted and high-qaulity statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
+ This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts. Our work attempts to address this issue and reduce hallucinations by grounding the answers to vetted and high-qaulity statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
    -  **grounded in SQC literature:** Our chatbot will only present answers based on concepts explained in the vetted, highly referenced public-domain book [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). The grounding of LLMs with reference material reduces hallucinations and improves domain-based response quality.  
    - **increased likelihood for ''I do not know'' answers:** The grounding also prevents the LLM from generating answers which are not in the reference materials, which allowed us to program the chatbot to state: 'As a SQC chatbot grounded only in NIST/SEMATCH's Engineering Staistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.'   
    - **highlighting of relevant text chunks:** Our chatbot utilizes the 5 most relevant text chunks to generate its response. In our graphical user interface, we present the two most relevant chunks (for brevity's sake since our text chunks are 1,000 characters) along with their L2 distance to the prompt. This allows users to understand how the generated response was created, providing insights into the response quality and accuracy.   
@@ -94,13 +94,3 @@ We greatly appreciate all of our contributors. Each contribution helps us to cre
 
 If you make use of our work, please cite our paper:
 
-```
-@article{megahed2023chat,
-    author    = {Megahed, Fadel M and Chen, Ying-Ju and Zwetsloot, Inez and Knoth, Sven and Montgomery, Douglas C and Jones-Farmer, L Allison},
-    title     = {{AI} and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting {ChatGPT} with an {SQC} Knowledge Base {(ChatSQC)}},
-    year      = {2023},
-    journal={arXiv preprint arXiv: },
-    doi = {10.48550/arXiv},
-    url = {https://doi.org/10.48550/arXiv}
-}
-```
