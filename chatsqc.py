@@ -27,6 +27,13 @@ from htbuilder.units import percent, px
 from htbuilder.funcs import rgba, rgb
 
 
+# needed once
+import subprocess
+import sys
+
+subprocess.run([f"{sys.executable}", "preprocess.py"])
+
+
 # Directory to store embeddings
 EMBEDDINGS_DIRECTORY = './vstore'
 
