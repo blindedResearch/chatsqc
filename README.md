@@ -2,7 +2,7 @@
 
 ## Hosted ChatSQC
 
-Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatSQC to explain foundational industrial statistics and quality concepts based on the public-domain book of [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). Currently, we do not require users to provide their own API keys, and there is no cost incurred by the users for using ChatSQC. Please see [our video]() for an overview of the app's features and how it can be used.
+Our ChatSQC chatbot is hosted at <https://chatsqc.streamlit.app/>. Practitioners and researchers can use ChatSQC to explain foundational industrial statistics and quality concepts based on the public-domain book of [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). Currently, we do not require users to provide their own API keys, and there is no cost incurred by the users for using ChatSQC. Please see [our video]() for an overview of the app's features and how it can be used.
 
 ---
 
