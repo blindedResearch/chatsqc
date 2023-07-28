@@ -96,13 +96,3 @@ We greatly appreciate all of our contributors. Each contribution helps us to cre
 
 If you make use of our work, please cite our paper:
 
-```
-@article{megahed2023chat,
-    author    = {Megahed, Fadel M and Chen, Ying-Ju, and Zwetsloot, Inez and Knoth, Sven and Montgomery, Douglas C and Jones-Farmer, L Allison},
-    title     = {{AI} and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting {ChatGPT} with an {SQC} Knowledge Base {(ChatSQC)}},
-    year      = {2023},
-    journal={arXiv preprint arXiv: },
-    doi = {10.48550/arXiv},
-    url = {https://doi.org/10.48550/arXiv}
-}
-```
