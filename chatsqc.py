@@ -27,13 +27,6 @@ from htbuilder.units import percent, px
 from htbuilder.funcs import rgba, rgb
 
 
-# needed once
-import subprocess
-import sys
-
-subprocess.run([f"{sys.executable}", "preprocess.py"])
-
-
 # Directory to store embeddings
 EMBEDDINGS_DIRECTORY = './vstore'
 
@@ -45,7 +38,7 @@ def get_conversation_chain(vectorstore):
     # prompting based on:
     # chatClimate and https://github.com/hwchase17/langchain/discussions/4199#discussioncomment-5840037
     system_message_prompt = SystemMessagePromptTemplate.from_template(
-    "You are a Q&A bot, an intelligent system that answers user questions ONLY based on the information provided by the user. When you use the information provided by the user, please include '\n (Source: NIST/SEMATECH e-Handbook of Statistical Methods)' at the end of your response with a line break. If the information cannot be found in the user information, please say 'As a SQC chatbot grounded only in NIST/SEMATCH's Engineering Staistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.' No answers should be made based on your in-house knowledge. For example, you may know what is a neural network, but that information does not come from the knowledge base that we provided to you. So defining a neural network based on your knowledge is unacceptable. Obviously, other algorithms, descriptions, formulas that are not in the knowledge base we provided are also unacceptable. The context is:\n{context}."
+    "You are a Q&A bot, an intelligent system that answers user questions ONLY based on the information provided by the user. When you use the information provided by the user, please include '\n (Source: NIST/SEMATECH e-Handbook of Statistical Methods)' at the end of your response with a line break. If the information cannot be found in the user information, please say 'As a SQC chatbot grounded only in NIST/SEMATCH's Engineering Staistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.' No answers should be made based on your in-house knowledge. For example, you may know what a large language model is, but that information does not come from the knowledge base that we provided to you. So defining a large language model based on your knowledge is unacceptable. Obviously, other algorithms, descriptions, and formulas that are not in the knowledge base we provided are also unacceptable. The context is:\n{context}."
     )
     human_message_prompt = HumanMessagePromptTemplate.from_template(
     "{question}"
@@ -211,16 +204,16 @@ def main():
         st.subheader("About ChatSQC!!")
         st.markdown("""
             - **Created by:** 
-                + :link: [JQT Author 1](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 2](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 3](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 4](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 5](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 6](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [Fadel M. Megahed](https://miamioh.edu/fsb/directory/?up=/directory/megahefm)
+                + :link: [Ying-Ju (Tessa) Chen](https://udayton.edu/directory/artssciences/mathematics/chen-ying-ju.php)
+                + :link: [Inez Zwetsloot](https://www.uva.nl/en/profile/z/w/i.m.zwetsloot/i.m.zwetsloot.html)
+                + :link: [Sven Knoth](https://www.hsu-hh.de/compstat/en/sven-knoth-2)
+                + :link: [Douglas C. Montgomery](https://search.asu.edu/profile/10123)
+                + :link: [Allison Jones-Farmer](https://miamioh.edu/fsb/directory/?up=/directory/farmerl2)
                     
             - **Version:** 0.2.0
                 
-            - **Last Updated:** July 26, 2023
+            - **Last Updated:** July 24, 2023
             
             - **Notes:**
                 + This application is built with [Streamlit](https://streamlit.io/) and uses [langchain](https://python.langchain.com/) with OpenAI to provide basic industrial statistics and SQC answers based on the seminal [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm).
