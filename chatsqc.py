@@ -228,12 +228,12 @@ def main():
         st.subheader("About ChatSQC!!")
         st.markdown("""
             - **Created by:** 
-                + :link: [Fadel M. Megahed](https://miamioh.edu/fsb/directory/?up=/directory/megahefm)
-                + :link: [Ying-Ju (Tessa) Chen](https://udayton.edu/directory/artssciences/mathematics/chen-ying-ju.php)
-                + :link: [Inez Zwetsloot](https://www.uva.nl/en/profile/z/w/i.m.zwetsloot/i.m.zwetsloot.html)
-                + :link: [Sven Knoth](https://www.hsu-hh.de/compstat/en/sven-knoth-2)
-                + :link: [Douglas C. Montgomery](https://search.asu.edu/profile/10123)
-                + :link: [Allison Jones-Farmer](https://miamioh.edu/fsb/directory/?up=/directory/farmerl2)
+                + :link: [JQT Author 1](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [JQT Author 2](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [JQT Author 3](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [JQT Author 4](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [JQT Author 5](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [JQT Author 6](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
                     
             - **Version:** 1.0.0
                 
