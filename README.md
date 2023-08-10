@@ -2,7 +2,7 @@
 
 ## Hosted ChatSQC
 
-Our ChatSQC chatbot is hosted at <https://chatsqc.streamlit.app/>. Practitioners and researchers can use ChatSQC to explain foundational industrial statistics and quality concepts based on the public-domain book of [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). Currently, we do not require users to provide their own API keys, and there is no cost incurred by the users for using ChatSQC. Please see [our video]() for an overview of the app's features and how it can be used.
+Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatSQC to explain foundational industrial statistics and quality concepts based on the public-domain book of [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). Currently, we do not require users to provide their own API keys, and there is no cost incurred by the users for using ChatSQC. Please see [our video]() for an overview of the app's features and how it can be used.
 
 ---
 
@@ -10,10 +10,11 @@ Our ChatSQC chatbot is hosted at <https://chatsqc.streamlit.app/>. Practitioners
 
  This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts, see [Megahed et al. 2023](https://www.tandfonline.com/doi/full/10.1080/08982112.2023.2206479) for a detailed discussion. Our work attempts to address this issue and reduce hallucinations by grounding the answers to vetted and high-quality statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
    -  **grounded in SQC literature:** Our chatbot will only present answers based on concepts explained in the vetted, highly referenced public-domain book [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). The grounding of LLMs with reference material reduces hallucinations and improves domain-based response quality.  
-   - **increased likelihood for ''I do not know'' answers:** The grounding also prevents the LLM from generating answers which are not in the reference materials, which allowed us to program the chatbot to state: 'As an SQC chatbot grounded only in NIST/SEMATCH's Engineering Statistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.'   
-   - **highlighting of relevant text chunks:** Our chatbot utilizes the 5 most relevant text chunks to generate its response. In our graphical user interface, we present the two most relevant chunks (for brevity's sake since our text chunks are 1,000 characters) along with their L2 distance to the prompt. This allows users to understand how the generated response was created, providing insights into the response quality and accuracy.   
+   - **increased likelihood for ''I do not know'' answers:** The grounding also prevents the LLM from generating answers which are not in the reference materials, which allowed us to program the chatbot to state: 'As an SQC chatbot grounded only in NIST/SEMATECH's Engineering Statistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.'   
+   - **highlighting of relevant text chunks:** Our chatbot utilizes up to 5 most relevant text chunks to generate its response. In our app, we present these most relevant chunks in HTML disclosure widgets along with their L2 distance to the prompt; in the widget's summary view, we provide: (a) a statement saying "Click for relevant text chunk" to indicate to the user that the text chunk can be viewed in detail by clicking on the text, and (b) we provide the L2-dist to the prompt in the summary view in parentheses after our "click here" statement. This allows users to understand how the generated response was created, providing insights into the response quality and accuracy.  
+   - **web links of relevant sources:** for each text chunk, we provide the title of the webpage (containing the subsection number and title) along with a hyperlink to its URL to allow the reader to read the full context in which our relevant text chunks were presented in the ehandbook. If more than one text chunk belong to a given webpage, we nest them together. 
 
-Researchers can implement and host their own versions of ChatSQC by setting up a virtual environment with python=3.9.17 and the package versions presented in the [requirements.txt]() file. This allows SQC researchers to have a testbed/playground to examine the impact of the different LLMs, their parameters, and prompting strategies on response quality. 
+Researchers can implement and host their own versions of ChatSQC by setting up a virtual environment with python=3.9.17 and the package versions presented in the [requirements.txt](https://github.com/fmegahed/chatsqc/blob/main/requirements.txt) file. This allows SQC researchers to have a testbed/playground to examine the impact of the different LLMs, their parameters, and prompting strategies on response quality. 
 
 
 ---
@@ -51,7 +52,7 @@ If you would like to run the chatbot on your local Python environment, please fo
 
 **Instructions for Running the App every time:**
 
-1. Open the Anaconda virtual environment from Anaconda by clicking on the dropdown menu with the default value of *base (root)* and you will find `chatsqc` below it.  
+1. Open the Anaconda virtual environment from Anaconda by clicking on the dropdown menu with the default value of *base (root)*, and you will find `chatsqc` below it.  
 2. Install (if needed) and launch the `command window` (CMD) after you click on `chatsqc`.  
     - Alternatively, you can type: `conda activate chatsqc` in the CMD from your base environment.  
 
@@ -65,7 +66,7 @@ If you would like to run the chatbot on your local Python environment, please fo
 
 ## Roadmap
 
-Our current version of the app uses `gpt-3.5-turbo-16k` as the LLM and [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). In future versions, we plan on using [`Llama 2 70B`](https://ai.meta.com/llama/) since it is open-sourced and can be locally installed (i.e., there will be no API costs for the embeddings and chat APIs). Furthermore, we are currently attempting to get copyright clearance to use the seminal [Introduction to Statistical Quality Control](https://www.wiley.com/en-us/Introduction+to+Statistical+Quality+Control%2C+8th+Edition-p-9781119399308) in our grounding material since it provides more in-depth knowledge of more advanced SQC concepts (e.g., the fast initial response of the EWMA and CUSUM charts).
+Our current version of the app uses `gpt-3.5-turbo-16k` as the LLM and [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). In future versions, we plan on using [`Llama 2 7B`](https://ai.meta.com/llama/) since it is open-sourced and can be locally installed (i.e., there will be no API costs for the embeddings and chat APIs). Furthermore, we are currently attempting to get copyright clearance to use the seminal [Introduction to Statistical Quality Control](https://www.wiley.com/en-us/Introduction+to+Statistical+Quality+Control%2C+8th+Edition-p-9781119399308) in our grounding material since it provides more in-depth knowledge of more advanced SQC concepts (e.g., the fast initial response of the EWMA and CUSUM charts).
 
 
 ---
@@ -76,6 +77,7 @@ Our ChatSQC's design was inspired by and utilized many features of @alejandro-ao
   - Preprocess the reference materials offline.  
   - Preprocess HTML files instead of PDF files.  
   - Use the recommended `RecursiveCharacterTextSplitter()` instead of the `CharacterTextSplitter()` based on the [LangChain documentation](https://python.langchain.com/docs/modules/data_connection/document_transformers/text_splitters/recursive_text_splitter) of the `CharacterTextSplitter()`.  
+  - Provide links/titles for the verified sources, relevant text chunks and the L2 distance of these chunks to the users' prompts.
 
 Furthermore, interfacing with LLM and Embedding APIs was simplified by the [LangChain](https://api.python.langchain.com/en/latest/api_reference.html) Python library. Similarly, the use of the [streamlit](https://docs.streamlit.io/library/api-reference) Python library has streamlined the development of our GUI. We have also capitalized on [Chris Klose's suggestions](https://discuss.streamlit.io/t/st-footer/6447/8) to change the streamlit footer default.   
 
@@ -96,3 +98,4 @@ We greatly appreciate all of our contributors. Each contribution helps us to cre
 
 If you make use of our work, please cite our paper:
 
+```
