@@ -10,7 +10,7 @@
 	- pip install -r requirement.txt   
 4. Run the app using:
 	- python preprocess.py (to create the vector store in your local environment)
-	- streamlit run chatsqc.py (to run the app)
+	- streamlit run ChatSQC.py (to run the app)
 
 
 
@@ -21,4 +21,4 @@
 	- Alternatively, you can type: conda activate chatsqc  
 3. Make sure that your terminal points out to the drive and folder where you save our Python files.   
 4. Run the app using:
-   - streamlit run chatsqc.py
+   - streamlit run ChatSQC.py
