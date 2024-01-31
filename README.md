@@ -58,7 +58,7 @@ If you would like to run the chatbot on your local Python environment, please fo
 
 3. Make sure that your terminal points out to the directory where you have our Python files.   
 
-4. Run the app using: `streamlit run chatsqc.py`
+4. Run the app using: `streamlit run ChatSQC.py`
 
 
 
