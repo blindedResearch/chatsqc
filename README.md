@@ -46,8 +46,7 @@ If you would like to run the chatbot on your local Python environment, please fo
     - For exploring and testing the API, all new OpenAI users get free $5 in free tokens. These tokens expire after 3 months. Once you exceed your quota, you can subscribe to one of their paid plans and continue using the API. 
 
 4. Run the following commands in Anaconda's cmd in this order:
-    - `python preprocess.py`, which will create the vector store containing the relationship between different text vectors  
-    - `streamlit run chatsqc.py`, which will run the app
+    - `streamlit run ChatSQC.py`, which will run the app
 
 
 **Instructions for Running the App every time:**
@@ -58,7 +57,7 @@ If you would like to run the chatbot on your local Python environment, please fo
 
 3. Make sure that your terminal points out to the directory where you have our Python files.   
 
-4. Run the app using: `streamlit run chatsqc.py`
+4. Run the app using: `streamlit run ChatSQC.py`
 
 
 
