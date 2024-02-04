@@ -325,21 +325,20 @@ def main():
         
         st.markdown("""
             - **Created by:**
-                + :link: [JQT Author 1](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 2](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 3](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 4](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 5](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
-                + :link: [JQT Author 6](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)
+                + :link: [JQT Author 1](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)  
+                + :link: [JQT Author 2](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
+                + :link: [JQT Author 3](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)  
+                + :link: [JQT Author 4](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
+                + :link: [JQT Author 5](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
+                + :link: [JQT Author 6](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
         """)
         
         st.write("")
         
         st.markdown("""
-            - **Version:** 1.2.0 (Jan 22, 2024)
+            - **Version:** 1.3.0 (Feb 03, 2024)
         
-            - **Notes:**
-                + This application is built with [Streamlit](https://streamlit.io/) and uses [langchain](https://python.langchain.com/) with OpenAI to provide basic industrial statistics and SQC answers based on the seminal [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm).
+            - This app is built with [Streamlit](https://streamlit.io/) and uses the OpenAI API to provide basic industrial statistics and SQC answers based on the seminal [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm).
                 """)
 
        
