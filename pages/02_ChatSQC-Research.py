@@ -60,7 +60,7 @@ def estimate_cost(model_name, input_text, output_text):
     # Define costs per model
     costs = {
         "gpt-4-1106-preview": {"input": 0.01/1000, "output": 0.03/1000},
-        "gpt-3.5-turbo-16k": {"input": 0.0015/1000, "output": 0.002/1000}
+        "gpt-3.5-turbo-16k": {"input": 0.0005/1000, "output": 0.0015/1000}
     }
 
     # Estimate the cost

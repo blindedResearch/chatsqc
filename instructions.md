@@ -9,7 +9,6 @@
 	- Use the command window to cd (change drive) to the location of your requirements.txt file  
 	- pip install -r requirement.txt   
 4. Run the app using:
-	- python preprocess.py (to create the vector store in your local environment)
 	- streamlit run ChatSQC.py (to run the app)
 
 
