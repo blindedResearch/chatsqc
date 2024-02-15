@@ -3,7 +3,7 @@
 1. Download and Install Anaconda (if needed) [Only Once]  
 2. Open Anaconda     
 3. Create a virtual environment using this Run this at the command line:  [Only once]  
-	- conda create -n chatsqc python=3.9   
+	- conda create -n chatsqc python=3.10   
 		+ It will ask you to click, y; please type: y and click Enter  
 	- conda activate chatsqc   
 	- Use the command window to cd (change drive) to the location of your requirements.txt file  
