@@ -7,7 +7,7 @@
 		+ It will ask you to click, y; please type: y and click Enter  
 	- conda activate chatsqc   
 	- Use the command window to cd (change drive) to the location of your requirements.txt file  
-	- pip install -r requirement.txt   
+	- pip install -r requirements.txt   
 4. Run the app using:
 	- streamlit run ChatSQC.py (to run the app)
 

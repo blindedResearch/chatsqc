@@ -36,7 +36,7 @@ If you would like to run the chatbot on your local Python environment, please fo
 
 2. Download/Install Anaconda (if needed) and Create a standalone virtual environment (note Python users can also `venv` to create their virtual environment; we do not assume Python expertise so our instructions are somewhat detailed):   
     - Download, install, and open Anaconda  
-    - Create a virtual environment by running this at the command line (opened from Anaconda): `conda create -n chatsqc python=3.9`. It will ask you to click, `y`; please type: `y` and click `Enter`.  
+    - Create a virtual environment by running this at the command line (opened from Anaconda): `conda create -n chatsqc python=3.10`. It will ask you to click, `y`; please type: `y` and click `Enter`.  
     - `conda activate chatsqc`  
     - Use the command window to cd (change drive) to the location of your `requirements.txt` file  
     - Run the command `pip install -r requirements.txt` to install the required dependencies (libraries with specific versions)  
