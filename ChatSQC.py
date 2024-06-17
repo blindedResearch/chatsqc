@@ -9,7 +9,7 @@ def main():
     Welcome to ChatSQC, a versatile chat application offering two distinct modes of interaction:
     
     - **ChatSQC-Basic**: A base version of the ChatSQC application, grounded in the NIST/SEMATECH Handbook of Engineering Statistics.
-    - **ChatSQC-Research**: A research-grade version of the ChatSQC application, grounded in [the entire collection of CC-BY and CC-BY-NC open-access journal articles from: (a) Technometrics, (b) Quality Engineering, and (c) QREI](https://raw.githubusercontent.com/blindedResearch/chatsqc/main/open_source_refs.csv).
+    - **ChatSQC-Research**: A research-grade version of the ChatSQC application, grounded in [the entire collection of CC-BY and CC-BY-NC open-access journal articles from: (a) Technometrics, (b) Quality Engineering, and (c) QREI](https://github.com/fmegahed/chatsqc/blob/main/open_source_refs.csv).
 
     Explore **each mode by selecting them from the sidebar**!
     """)
@@ -37,12 +37,12 @@ def main():
         
         st.markdown("""
             - **Created by:**
-                + :link: [JQT Author 1](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)  
-                + :link: [JQT Author 2](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
-                + :link: [JQT Author 3](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation)  
-                + :link: [JQT Author 4](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
-                + :link: [JQT Author 5](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
-                + :link: [JQT Author 6](https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=ujqt20#Anonymisation) 
+                + :link: [Fadel M. Megahed](https://miamioh.edu/fsb/directory/?up=/directory/megahefm)  
+                + :link: [Ying-Ju (Tessa) Chen](https://udayton.edu/directory/artssciences/mathematics/chen-ying-ju.php)  
+                + :link: [Inez Zwetsloot](https://www.uva.nl/en/profile/z/w/i.m.zwetsloot/i.m.zwetsloot.html)  
+                + :link: [Sven Knoth](https://www.hsu-hh.de/compstat/en/sven-knoth-2)  
+                + :link: [Douglas C. Montgomery](https://search.asu.edu/profile/10123)  
+                + :link: [Allison Jones-Farmer](https://miamioh.edu/fsb/directory/?up=/directory/farmerl2)
         """)
         st.write("")
 
