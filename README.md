@@ -14,7 +14,7 @@ Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatS
    - **highlighting of relevant text chunks:** Our chatbot utilizes up to 5 most relevant text chunks to generate its response. In our app, we present these most relevant chunks in HTML disclosure widgets along with their L2 distance to the prompt; in the widget's summary view, we provide: (a) a statement saying "Click for relevant text chunk" to indicate to the user that the text chunk can be viewed in detail by clicking on the text, and (b) we provide the L2-dist to the prompt in the summary view in parantheses after our "click here" statement. This allows users to understand how the generated response was created, providing insights into the response quality and accuracy.  
    - **web links of relevant sources:** for each text chunk, we provide the title of the webpage (containing the subsection number and title) along with a hyperlink to its URL to allow the reader to read the full context in which our relevant text chunks were presented in the ehandbook. If more than one text chunk belong to a given webpage, we nest them together. 
 
-Researchers can implement and host their own versions of ChatSQC by setting up a virtual environment with python=3.9.17 and the package versions presented in the [requirements.txt](https://github.com/fmegahed/chatsqc/blob/main/requirements.txt) file. This allows SQC researchers to have a testbed/playground to examine the impact of the different LLMs, their parameters, and prompting strategies on response quality. 
+Researchers can implement and host their own versions of ChatSQC by setting up a virtual environment with python=3.10 and the package versions presented in the [requirements.txt](https://github.com/fmegahed/chatsqc/blob/main/requirements.txt) file. This allows SQC researchers to have a testbed/playground to examine the impact of the different LLMs, their parameters, and prompting strategies on response quality. 
 
 
 ---
@@ -100,10 +100,10 @@ If you make use of our work, please cite our paper:
 ```
 @article{megahed2023chat,
     author    = {Megahed, Fadel M and Chen, Ying-Ju, and Zwetsloot, Inez and Knoth, Sven and Montgomery, Douglas C and Jones-Farmer, L Allison},
-    title     = {{AI} and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting {ChatGPT} with an {SQC} Knowledge Base {(ChatSQC)}},
-    year      = {2023},
-    journal={},
-    doi = {},
-    url = {}
+    title     = {Introducing ChatSQC: Enhancing statistical quality control with augmented AI},
+    year      = {2024},
+    journal={Journal of Quality Technology},
+    doi = {10.1080/00224065.2024.2372328},
+    url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2024.2372328}
 }
 ```
