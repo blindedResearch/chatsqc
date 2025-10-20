@@ -8,7 +8,7 @@ Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatS
 
  ## Introduction
 
- This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts, see [Megahed et al. 2023](https://www.tandfonline.com/doi/full/10.1080/08982112.2023.2206479) for a detailed discussion. Our work attempts to address this issue and reduce hallucinations by grounding the answers to vetted and high-quality statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
+ This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts, see [Megahed et al. 2024](https://www.tandfonline.com/doi/full/10.1080/08982112.2023.2206479) for a detailed discussion. Our work attempts to address this issue and reduce hallucinations by grounding the answers to vetted and high-quality statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
    -  **grounded in SQC literature:** Our chatbot will only present answers based on concepts explained in the vetted, highly referenced public-domain book [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). The grounding of LLMs with reference material reduces hallucinations and improves domain-based response quality.  
    - **increased likelihood for ''I do not know'' answers:** The grounding also prevents the LLM from generating answers which are not in the reference materials, which allowed us to program the chatbot to state: 'As an SQC chatbot grounded only in NIST/SEMATECH's Engineering Statistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.'   
    - **highlighting of relevant text chunks:** Our chatbot utilizes up to 5 most relevant text chunks to generate its response. In our app, we present these most relevant chunks in HTML disclosure widgets along with their L2 distance to the prompt; in the widget's summary view, we provide: (a) a statement saying "Click for relevant text chunk" to indicate to the user that the text chunk can be viewed in detail by clicking on the text, and (b) we provide the L2-dist to the prompt in the summary view in parantheses after our "click here" statement. This allows users to understand how the generated response was created, providing insights into the response quality and accuracy.  
@@ -59,14 +59,11 @@ If you would like to run the chatbot on your local Python environment, please fo
 
 4. Run the app using: `streamlit run ChatSQC.py`
 
-
-
 ---
 
 ## Roadmap
 
-Our current version of the app uses `gpt-3.5-turbo-16k` as the LLM and [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). In future versions, we plan on using [`Llama 2 7B`](https://ai.meta.com/llama/) since it is open-sourced and can be locally installed (i.e., there will be no API costs for the embeddings and chat APIs). Furthermore, we are currently attempting to get copyright clearance to use the seminal [Introduction to Statistical Quality Control](https://www.wiley.com/en-us/Introduction+to+Statistical+Quality+Control%2C+8th+Edition-p-9781119399308) in our grounding material since it provides more in-depth knowledge of more advanced SQC concepts (e.g., the fast initial response of the EWMA and CUSUM charts).
-
+Our current version of the app uses `gpt-4.1` as the LLM and [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). 
 
 ---
 
@@ -98,12 +95,16 @@ We greatly appreciate all of our contributors. Each contribution helps us to cre
 If you make use of our work, please cite our paper:
 
 ```
-@article{megahed2023chat,
-    author    = {Megahed, Fadel M and Chen, Ying-Ju, and Zwetsloot, Inez and Knoth, Sven and Montgomery, Douglas C and Jones-Farmer, L Allison},
-    title     = {Introducing ChatSQC: Enhancing statistical quality control with augmented AI},
-    year      = {2024},
-    journal={Journal of Quality Technology},
-    doi = {10.1080/00224065.2024.2372328},
-    url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2024.2372328}
+@article{megahed2024introducing,
+  title={Introducing ChatSQC: Enhancing statistical quality control with augmented AI},
+  author={Megahed, Fadel M and Chen, Ying-Ju and Zwetsloot, Inez M and Knoth, Sven and Montgomery, Douglas C and Jones-Farmer, L Allison},
+  journal={Journal of Quality Technology},
+  volume={56},
+  number={5},
+  pages={474--497},
+  year={2024},
+  publisher={Taylor \& Francis},
+  doi = {10.1080/00224065.2024.2372328},
+  url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2024.2372328}
 }
 ```
