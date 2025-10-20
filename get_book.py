@@ -2,7 +2,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import re
-from langchain.document_loaders import SeleniumURLLoader
+from langchain_community.document_loaders import SeleniumURLLoader
 import pickle
 
 # Retrieving all the Webpages from the NIST E-handobbk:

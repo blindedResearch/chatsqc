@@ -47,7 +47,7 @@ def main():
         st.write("")
 
         st.markdown("""
-            - **Version:** 1.3.0 (Feb 03, 2024)
+            - **Version:** 1.5.0 (Oct 19, 2025)
         """)
 
        

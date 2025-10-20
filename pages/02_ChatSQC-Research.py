@@ -7,7 +7,7 @@ import re
 
 # to have a custom prompt with langchain
 # Ref: https://github.com/hwchase17/langchain/discussions/4199#discussioncomment-5840037
-from langchain.prompts import (
+from langchain_core.prompts import (
     ChatPromptTemplate,
     HumanMessagePromptTemplate,
     SystemMessagePromptTemplate,
@@ -16,8 +16,12 @@ from langchain.prompts import (
 # LangChain Imports
 from langchain_openai import ChatOpenAI
 
+
+# Memory
 from langchain.memory import ConversationBufferMemory
+# Chains
 from langchain.chains import ConversationalRetrievalChain
+
 
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -59,8 +63,10 @@ def estimate_cost(model_name, input_text, output_text):
 
     # Define costs per model
     costs = {
-        "gpt-4-turbo-preview": {"input": 0.01/1000, "output": 0.03/1000},
-        "gpt-3.5-turbo-0125": {"input": 0.0005/1000, "output": 0.0015/1000}
+    "gpt-4o-2024-08-06": {"input": 2.5/1_000_000, "output": 10/1_000_000},
+    "gpt-4.1-2025-04-14": {"input": 2.0/1_000_000, "output": 8/1_000_000},
+    "gpt-4.1-mini": {"input": 0.4/1_000_000, "output": 1.6/1_000_000},
+    "gpt-4.1-nano": {"input": 0.1/1_000_000, "output": 0.4/1_000_000}
     }
 
     # Estimate the cost
@@ -296,8 +302,9 @@ def main():
 
     # Load the preprocessed vectorstore from a local file
     embeddings_model = OpenAIEmbeddings(model = 'text-embedding-3-large', chunk_size = 1000)
-    vectorstore = FAISS.load_local('vstore/vectorstore_papers', embeddings = embeddings_model)
+    vectorstore = FAISS.load_local('vstore/vectorstore_papers', embeddings = embeddings_model, allow_dangerous_deserialization=True) # this argument allow_dangerous_deserialization=True is removed
     
+
     # Load the headers_dictionary
     with open('apa_citations.pkl', 'rb') as f:
         headers_dict = pickle.load(f)
@@ -307,7 +314,7 @@ def main():
     st.session_state.headers = headers_dict
     
     if 'model_choice' not in st.session_state:
-        st.session_state.model_choice = "gpt-4-turbo-preview"  # Default model
+        st.session_state.model_choice = "gpt-4.1-mini"  # Default model
         
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = []
@@ -335,15 +342,20 @@ def main():
         
         # Create a dropdown in the sidebar to let users select a model
         model_mapping = {
-            "gpt-4 (State-of-the-art OpenAI model)": "gpt-4-turbo-preview",
-            "gpt-3.5-turbo-0125 (Model for general queries)": "gpt-3.5-turbo-0125",
+            "gpt-4o (Legacy GPT-4 Omni model)": "gpt-4o-2024-08-06",
+            "gpt-4.1 (High-quality GPT-4 model)": "gpt-4.1-2025-04-14",
+            "gpt-4.1-mini (Balanced speed and cost)": "gpt-4.1-mini",
+            "gpt-4.1-nano (Fastest, lowest-cost option)": "gpt-4.1-nano",
         }
-        
+
         selected_display_name = st.selectbox(
             "Choose the LLM Model:",
             options=list(model_mapping.keys()),
-            index=0 if st.session_state.model_choice == "gpt-4-turbo-preview" else 1
+            index=list(model_mapping.keys()).index(
+                next((k for k in model_mapping if model_mapping[k] == "gpt-4.1-mini"), list(model_mapping.keys())[0])
+            )
         )
+
     
         # Update the session state with the user's choice
         actual_model_name = model_mapping[selected_display_name]
@@ -363,7 +375,7 @@ def main():
         st.write("")
         
         st.markdown("""
-            - **Version:** 1.3.0 (Feb 03, 2024)
+            - **Version:** 1.5.0 (October 19, 2025)
         
             - This app is built with [Streamlit](https://streamlit.io/) and uses the OpenAI API to provide SQC answers based on [the entire collection of CC-BY and CC-BY-NC open-access journal articles from: (a) Technometrics, (b) Quality Engineering, and (c) QREI](https://github.com/fmegahed/chatsqc/blob/main/open_source_refs.csv).
                 """)
@@ -387,5 +399,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
