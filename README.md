@@ -2,13 +2,13 @@
 
 ## Hosted ChatSQC
 
-Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatSQC to explain foundational industrial statistics and quality concepts based on the public-domain book of [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). Currently, we do not require users to provide their own API keys, and there is no cost incurred by the users for using ChatSQC. Please see [our video]() for an overview of the app's features and how it can be used.
+Our ChatSQC chatbot is hosted at <>. Practitioners and researchers can use ChatSQC to explain foundational industrial statistics and quality concepts based on the public-domain book of [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). Currently, we do not require users to provide their own API keys, and users incur no cost for using ChatSQC. Please see [our video]() for an overview of the app's features and how it can be used.
 
 ---
 
  ## Introduction
 
- This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts, see [Megahed et al. 2024](https://www.tandfonline.com/doi/full/10.1080/08982112.2023.2206479) for a detailed discussion. Our work attempts to address this issue and reduce hallucinations by grounding the answers to vetted and high-quality statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
+ This is the official implementation of [AI and the Future of Work in Statistical Quality Control: Insights from a First Attempt to Augmenting ChatGPT with an SQC Knowledge Base (ChatSQC)](), where we attempt to address the imprecise answers obtained from generally trained large language models (LLMs) when explaining industrial statistics and quality control concepts, see [Megahed et al. 2024](https://www.tandfonline.com/doi/full/10.1080/08982112.2023.2206479) for a detailed discussion. Our work attempts to address this issue and reduce hallucinations by grounding the answers in vetted and high-quality statistical quality control (SQC) reference materials. As opposed to traditional LLMs such as ChatGPT (GPT 4.0 with no plugins), our ChatSQC bot provides the following advantages:  
    -  **grounded in SQC literature:** Our chatbot will only present answers based on concepts explained in the vetted, highly referenced public-domain book [NIST/SEMATECH Engineering Statistics Handbook](https://www.itl.nist.gov/div898/handbook/index.htm). The grounding of LLMs with reference material reduces hallucinations and improves domain-based response quality.  
    - **increased likelihood for ''I do not know'' answers:** The grounding also prevents the LLM from generating answers which are not in the reference materials, which allowed us to program the chatbot to state: 'As an SQC chatbot grounded only in NIST/SEMATECH's Engineering Statistics Handbook, I do not know the answer to this question as it is not in my referenced/grounding material. I am sorry for not being able to help.'   
    - **highlighting of relevant text chunks:** Our chatbot utilizes up to 5 most relevant text chunks to generate its response. In our app, we present these most relevant chunks in HTML disclosure widgets along with their L2 distance to the prompt; in the widget's summary view, we provide: (a) a statement saying "Click for relevant text chunk" to indicate to the user that the text chunk can be viewed in detail by clicking on the text, and (b) we provide the L2-dist to the prompt in the summary view in parantheses after our "click here" statement. This allows users to understand how the generated response was created, providing insights into the response quality and accuracy.  
@@ -21,7 +21,7 @@ Researchers can implement and host their own versions of ChatSQC by setting up a
 
 ## ChatSQC's Design
 
-Let us include our methods figure here and provide a short description of how the chatbot is designed. 
+<img width="960" height="528" alt="ChatSQC_flowchart_new" src="https://github.com/user-attachments/assets/7f1937d7-52c0-412a-8968-fcbbcae6067b" />
 
 
 ---
@@ -108,4 +108,5 @@ If you make use of our work, please cite our paper:
   url = {https://www.tandfonline.com/doi/full/10.1080/00224065.2024.2372328}
 }
 ```
+
 
